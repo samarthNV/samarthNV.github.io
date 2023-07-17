@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f84562e7d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo-portfolio.png" id="img1"></a>
+    </nav>
+
+    <div class="container">
+        <header class="title-about">
+            <h1>About Me</h1>
+        </header>
+        <div class="main-content-about">
+            <img src="images/img2-portfolio.png" id="img4" />
+            <div class="card-about">
+                <span style="font-size: 150%; font-weight: 500;">Hello,</span> <br> I am Samarth Bura. I am a full-stack developer and a competetive programmer. Still an inquisitive learner and a passionate student, with an ardent zeal of computers and software technologies. I love to read books and write blogs.
+            </div>
+            <div class="skill-title">My Skillset </div>
+            <div class="skill-icon-container">
+                <img src="icons/python.png" class="skill-icon">
+                <img src="icons/java.png" class="skill-icon">
+                <img src="icons/c.png" class="skill-icon">
+                <img src="icons/c++.png" class="skill-icon">
+                <img src="icons/html.png" class="skill-icon">
+                <img src="icons/css.png" class="skill-icon">
+                <img src="icons/js.png" class="skill-icon">
+                <img src="icons/bootstrap.png" class="skill-icon">
+                <img src="icons/node.png" class="skill-icon">
+                <img src="icons/mongo.png" class="skill-icon">
+                <img src="icons/postman.png" class="skill-icon">
+                <img src="icons/django.png" class="skill-icon">
+                <img src="icons/git.png" class="skill-icon">
+                <img src="icons/canva.png" class="skill-icon">
+                <img src="icons/figma.png" class="skill-icon">
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="controlClass">
+        <div class="control control-1 active-btn">
+            <a href="index.html">
+                <span id="tooltip">Home</span>
+                <span><i class="fas fa-home"></i></span>
+            </a>
+        </div>
+        <div class="control control-2">
+            <a href="about.html">
+                <span id="tooltip">About</span>
+                <span><i class="fas fa-user"></i></span>
+            </a>
+        </div>
+        <div class="control control-3">
+            <a href="work.html">
+                <span id="tooltip">Work</span>
+                <span><i class="fas fa-briefcase"></i></span>
+            </a>
+        </div>
+        <div class="control control-4">
+            <a href="blogs.html">
+                <span id="tooltip">Blogs</span>
+                <span><i class="far fa-newspaper"></i></span>
+            </a>
+        </div>
+        <div class="control control-5">
+            <a href="contact.html">
+                <span id="tooltip">Contact</span>
+                <span><i class="fas fa-envelope-open"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <script >
+        const classBtn = document.querySelectorAll('.controlClass');
+        const btns = document.querySelectorAll('.control')
+
+        function btnTransition(){
+            for(let i = 0; i < btns.length; i++){
+                btns[i].addEventListener('click', function(){
+                    let currentBtn = document.querySelectorAll('.active-btn');
+                    currentBtn[0].className = currentBtn[0].className.replace("active-btn", "");
+                    this.className += " active-btn";
+                })
+            }
+        }
+
+        btnTransition();
+    </script>
+
+</body>
+</html>

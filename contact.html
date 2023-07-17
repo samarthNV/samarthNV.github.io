@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f84562e7d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        h3{
+            font-size: calc(.5vw + 1.5rem);
+        }
+
+        @media(max-width: 100px){
+            h3{
+                font-size: calc(.5vw + 1.5rem);
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><img src="images/logo-portfolio.png" id="img1"></a>
+    </nav>
+
+<div class="container">
+    <header class="title-contact">
+        <h1>Contact Me</h1>
+    </header>
+    <div class="main-content-contact">
+        <div class="social">
+            <img src="icons/linkedinIcon.png" class="social-image">
+            <a href="https://www.linkedin.com/in/samarth-bura-25717622a/" target="_blank"><h3 class="contact-name2">LinkedIn</h3></a>
+        </div>
+        <div class="social">
+            <img src="icons/githubIcon.png" class="social-image">
+            <a href="https://github.com/samarthNV" target="_blank"><h3 class="contact-name1">Github</h3></a>
+        </div>
+        <div class="social">
+            <img src="icons/twitterIcon.png" class="social-image">
+            <a href="https://twitter.com/samarth_bura" target="_blank"><h3 class="contact-name3">Twitter</h3></a>
+        </div>
+    </div>
+    <br>
+    <div class="contact-container">
+        <form action="https://formspree.io/f/mpzgzbby" method="post">
+            <input name="username" type="text" placeholder="username" required>
+            <input name="email" type="email" id="email" placeholder="email" required>
+            <textarea name="Message" placeholder="Write your message" rows="4"></textarea>
+            <button type="submit" id="sbtn">Send</button>
+        </form>
+    </div>
+</div>
+
+<div class="controlClass">
+    <div class="control control-1 active-btn">
+        <a href="index.html">
+            <span id="tooltip">Home</span>
+            <span><i class="fas fa-home"></i></span>
+        </a>
+    </div>
+    <div class="control control-2">
+        <a href="about.html">
+            <span id="tooltip">About</span>
+            <span><i class="fas fa-user"></i></span>
+        </a>
+    </div>
+    <div class="control control-3">
+        <a href="work.html">
+            <span id="tooltip">Work</span>
+            <span><i class="fas fa-briefcase"></i></span>
+        </a>
+    </div>
+    <div class="control control-4">
+        <a href="blogs.html">
+            <span id="tooltip">Blogs</span>
+            <span><i class="far fa-newspaper"></i></span>
+        </a>
+    </div>
+    <div class="control control-5">
+        <a href="contact.html">
+            <span id="tooltip">Contact</span>
+            <span><i class="fas fa-envelope-open"></i></span>
+        </a>
+    </div>
+</div>
+
+<script >
+    const classBtn = document.querySelectorAll('.controlClass');
+    const btns = document.querySelectorAll('.control')
+
+    function btnTransition(){
+        for(let i = 0; i < btns.length; i++){
+            btns[i].addEventListener('click', function(){
+                let currentBtn = document.querySelectorAll('.active-btn');
+                currentBtn[0].className = currentBtn[0].className.replace("active-btn", "");
+                this.className += " active-btn";
+            })
+        }
+    }
+
+    btnTransition();
+</script>
+
+</body>
+</html>
