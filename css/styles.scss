@@ -57,10 +57,36 @@ body{
     left: 40%;
 }
 
-#title-name{
+.title-name1{
     color: var(--color-darkGreen);
     font-size: 10vh;
     right: 20%;
+}
+
+.title-name2{
+    color: var(--color-darkGreen);
+    font-size: 10vh;
+    margin-right: 110px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .title-hi {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .title-next {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .title-name1 {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .title-name2 {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
 }
 
 #img3{
@@ -109,8 +135,9 @@ a{
         margin: .7rem 0;
         box-shadow: var(--box-shadow);
         i{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
+
     }
 }
 
@@ -200,10 +227,10 @@ a{
 }
 
 .card-blog{
-    width: 35%;
+    width: 40%;
     background-color: var(--color-plightGreen);
     border-radius: 10px;
-    margin: 7%;
+    margin: 4%;
     box-shadow: 2px 2px 10px var(--color-darkGreen);
     display: inline-block;
     align-items: center;
@@ -224,7 +251,7 @@ a{
     color: var(--color-black);
 }
 
-.card-blog-btn button{
+.card-btn button{
     margin: 15px;
     background-color: var(--color-darkGreen);
     color: var(--color-white);
